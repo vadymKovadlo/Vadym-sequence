@@ -1,0 +1,11 @@
+#name: CountSubsequenceTablePython
+#language: python
+#input: dataframe inputDf
+#input: column inputColName
+#input: string outputColName
+#input: string subseq
+#output: dataframe outputDf
+
+outputDf = pd.DataFrame({
+  outputColName: inputDf[inputColName].str.count(subseq)
+})

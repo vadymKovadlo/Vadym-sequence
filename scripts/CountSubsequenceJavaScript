@@ -1,0 +1,7 @@
+//name: CountSubsequenceJavaScript
+//description: counting all occurrences of a given subsequence in a sequence
+//language: javascript
+//input: string sequence
+//input: string subsequence
+//output: int count
+count = sequence.split(subsequence).length - 1

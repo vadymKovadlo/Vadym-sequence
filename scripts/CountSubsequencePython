@@ -1,0 +1,7 @@
+#name: CountSubsequencePython
+#description: count all occurrences of a given subsequence in a sequence
+#language: python
+#input: string sequence
+#input: string subsequence
+#output: int count
+count = sequence.count(subsequence)
