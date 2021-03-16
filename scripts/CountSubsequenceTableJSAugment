@@ -1,0 +1,15 @@
+//name: CountSubsequenceTableJSAugment
+//language: javascript
+//input: dataframe df
+//input: column ColName
+//input: string subseq = ATG
+
+grok.functions.call(
+  "vkovadlo:CountSubsequenceTableJS", {
+    'inputDf': df,
+    'inputColName': ColName,
+    'outputColName': `N(${subseq})`,
+    'subseq': subseq
+  }).then((resultDf) => {
+    df.columns.insert(resultDf.columns.byIndex(0));
+  });

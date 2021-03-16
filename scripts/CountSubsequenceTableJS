@@ -1,0 +1,16 @@
+//name: CountSubsequenceTableJS
+//language: javascript
+//input: dataframe inputDf
+//input: column inputColName
+//input: string outputColName
+//input: string subseq
+//output: dataframe outputDf
+
+let newCol = DG.Column.fromType(
+  DG.COLUMN_TYPE.INT, outputColName, inputDf.rowCount);
+for (let i = 0; i < newCol.length; ++i) {
+  const seq = inputDf.get(inputColName, i);
+  const count = seq.split(subseq).length - 1; // your subsequence counting here
+  newCol.set(i, count);
+}
+outputDf = DG.DataFrame.fromColumns([newCol]);
